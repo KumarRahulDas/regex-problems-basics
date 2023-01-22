@@ -10,8 +10,16 @@ public class UserRegistration {
      * @param args
      */
     public static void main(String[] args) {
-        String name = "Abc";
-        System.out.println(validateFirstName(name));
+        String firstName = "Dhiraj";
+        String lastName = "Sharma";
+        String email = "abc.xyz@bl.co.in";
+        String mNumber = "91 8988373573";
+        String password = "656cAc683";
+        System.out.println(validateFirstName(firstName));
+        System.out.println(validateLastName(lastName));
+        System.out.println(validateEmail(email));
+        System.out.println(validatingMobile(mNumber));
+        System.out.println(validatePassword(password));
     }
 
     /**
