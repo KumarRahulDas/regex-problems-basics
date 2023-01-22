@@ -34,4 +34,15 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(lastName);
         return matcher.matches();
     }
+
+    /**
+     * Method for validating the user's email using regex
+     * @param email : user's email
+     * @return
+     */
+    private static boolean validateEmail(String email){
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+[.][a-zA-Z]+@+[a-zA-Z]+[.][a-zA-Z]+[.][a-zA-Z]*$");
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
 }
