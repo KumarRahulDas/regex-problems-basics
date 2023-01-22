@@ -45,4 +45,10 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+    private static boolean validatingMobile(String mNumber){
+        Pattern pattern = Pattern.compile("^[9][1]+\\s\\d{10}$");
+        Matcher matcher = pattern.matcher(mNumber);
+        return matcher.matches();
+    }
+
 }
