@@ -50,5 +50,16 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(mNumber);
         return matcher.matches();
     }
+    /**
+     * Method for validating the user's password using regex.
+     * Rule1 – minimum 8 characters
+     * @param password : user password
+     * @return : true or false.
+     */
+    private static boolean validatePassword(String password){
+        Pattern pattern = Pattern.compile("^[A-Za-z0-9]{8,}$");
+        Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
 
 }
