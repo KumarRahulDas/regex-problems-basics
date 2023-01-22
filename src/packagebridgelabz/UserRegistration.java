@@ -24,4 +24,14 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(firstName);
         return matcher.matches();
     }
+    /**
+     * Method for validating the user last name using regex.
+     * @param lastName : user's last name
+     * @return
+     */
+    private static boolean validateLastName(String lastName){
+        Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
+        Matcher matcher = pattern.matcher(lastName);
+        return matcher.matches();
+    }
 }
