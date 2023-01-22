@@ -10,10 +10,10 @@ public class UserRegistration {
      * @param args
      */
     public static void main(String[] args) {
-        String firstName = "Dhiraj";
-        String lastName = "Sharma";
+        String firstName = "Rahul";
+        String lastName = "Das";
         String email = "abc.xyz@bl.co.in";
-        String mNumber = "91 8988373573";
+        String mNumber = "91 9988373573";
         String password = "A3gffkdhs";
         System.out.println(validateFirstName(firstName));
         System.out.println(validateLastName(lastName));
@@ -48,8 +48,11 @@ public class UserRegistration {
      * @param email : user's email
      * @return
      */
-    private static boolean validateEmail(String email){
+    private static boolean validateEmail(String email) {
         Pattern pattern = Pattern.compile("^[a-zA-Z]+[.][a-zA-Z]+@+[a-zA-Z]+[.][a-zA-Z]+[.][a-zA-Z]*$");
+        if (email == null) {
+            return false;
+        }
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
